@@ -1,18 +1,26 @@
-import 'package:flutter/material.dart';
-import 'pages/weather_page.dart';
+// Importation des bibliothèques nécessaires
+import 'package:flutter/material.dart'; // Importation du package Flutter pour créer des applications
+import 'pages/weather_page.dart'; // Importation de la page WeatherPage qui affiche les données météo
 
+// Fonction principale, point d'entrée de l'application
 void main() {
+  // Exécute l'application Flutter avec MyApp comme widget racine
   runApp(const MyApp());
 }
 
+// Définition de la classe MyApp qui étend StatelessWidget
+// StatelessWidget est utilisé pour les widgets qui n'ont pas besoin de gérer un état interne
 class MyApp extends StatelessWidget {
+  // Constructeur de la classe MyApp
   const MyApp({super.key});
 
+  // Méthode build qui décrit comment le widget doit être construit
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
+    // Retourne un widget MaterialApp, qui est la base de toute application Flutter
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: WeatherPage(),
+      debugShowCheckedModeBanner: false, // Désactive le banner de debug en haut à droite
+      home: WeatherPage(), // Définit la page d'accueil de l'application comme étant WeatherPage
     );
   }
 }
