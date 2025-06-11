@@ -5,7 +5,7 @@ import 'package:meteo_app/services/weather_service.dart'; // Service pour récup
 import 'package:meteo_app/models/weather_models.dart'; // Modèle de données pour les informations météo
 
 // Clé API pour accéder au service de météo
-final String apiKey = '2cd412827fb830249f3274da305c8d42'; // Remplacez par votre clé API réelle
+final String apiKey = 'API_KEY'; // Remplacez par votre clé API réelle
 
 // Définition de la classe WeatherPage qui étend StatefulWidget
 // StatefulWidget est utilisé pour les widgets qui doivent gérer un état interne changeant
