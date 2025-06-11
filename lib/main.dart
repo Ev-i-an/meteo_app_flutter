@@ -1,6 +1,6 @@
 // Importation des bibliothèques nécessaires
 import 'package:flutter/material.dart'; // Importation du package Flutter pour créer des applications
-import 'pages/weather_page.dart'; // Importation de la page WeatherPage qui affiche les données météo
+import 'package:meteo_app/pages/login_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 // Fonction principale, point d'entrée de l'application
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     // Retourne un widget MaterialApp, qui est la base de toute application Flutter
     return const MaterialApp(
       debugShowCheckedModeBanner: false, // Désactive le banner de debug en haut à droite
-      home: WeatherPage(), // Définit la page d'accueil de l'application comme étant WeatherPage
+      home: LoginPage(), // Définit la page d'accueil de l'application comme étant WeatherPage
     );
   }
 }

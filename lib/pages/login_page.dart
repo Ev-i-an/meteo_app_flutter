@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meteo_app/auth/auth_service.dart';
 import 'package:meteo_app/pages/register_page.dart';
+import 'package:meteo_app/pages/weather_page.dart'; // Importation de WeatherPage
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class LoginPage extends StatefulWidget {
@@ -20,11 +21,21 @@ class _LoginPageState extends State<LoginPage> {
     final password = _passwordController.text;
 
     try {
+      // Tentative de connexion avec l'email et le mot de passe
       await authService.signInWithEmailPassword(email, password);
+
+      // Redirection vers WeatherPage après une connexion réussie
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const WeatherPage()),
+        );
+      }
     } catch (e) {
+      // Affichage d'un message d'erreur si la connexion échoue
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Error: $e")),
+          SnackBar(content: Text("Erreur: $e")),
         );
       }
     }
@@ -43,12 +54,12 @@ class _LoginPageState extends State<LoginPage> {
           TextField(
             controller: _passwordController,
             decoration: const InputDecoration(labelText: "Mot de passe"),
-            obscureText: true, // Pour masquer le texte du mot de passe
+            obscureText: true,
           ),
           const SizedBox(height: 12),
           ElevatedButton(
             onPressed: login,
-            child: const Text("Login"),
+            child: const Text("Connexion"),
           ),
           const SizedBox(height: 12),
           GestureDetector(
@@ -58,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                 builder: (context) => const RegisterPage(),
               ),
             ),
-            child: const Center(child: Text("Don't have an account? Sign up")),
+            child: const Center(child: Text("Vous n'avez pas de compte ? Inscrivez-vous")),
           ),
         ],
       ),
