@@ -5,6 +5,7 @@ import 'package:geolocator/geolocator.dart'; // Pour accéder aux fonctionnalit�
 import 'package:geocoding/geocoding.dart'; // Pour convertir les coordonnées géographiques en informations de lieu
 import '../models/weather_models.dart'; // Importation du modèle de données météo
 
+
 class WeatherService {
   // URL de base pour l'API OpenWeatherMap
   static const String baseUrl = 'http://api.openweathermap.org/data/2.5/weather';

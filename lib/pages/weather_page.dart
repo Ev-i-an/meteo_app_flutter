@@ -4,6 +4,7 @@ import 'package:logging/logging.dart'; // Pour la journalisation des erreurs et 
 import 'package:meteo_app/services/weather_service.dart'; // Service pour récupérer les données météo
 import 'package:meteo_app/models/weather_models.dart'; // Modèle de données pour les informations météo
 
+
 // Clé API pour accéder au service de météo
 final String apiKey = '2cd412827fb830249f3274da305c8d42'; // Remplacez par votre clé API réelle
 
