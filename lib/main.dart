@@ -1,9 +1,15 @@
 // Importation des bibliothèques nécessaires
 import 'package:flutter/material.dart'; // Importation du package Flutter pour créer des applications
 import 'pages/weather_page.dart'; // Importation de la page WeatherPage qui affiche les données météo
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 // Fonction principale, point d'entrée de l'application
-void main() {
+void main() async {
+
+  await Supabase.initialize(
+    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx3cGNsaGZldHpmdHRpc3pmcWZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1OTU1NzYsImV4cCI6MjA2NTE3MTU3Nn0.DxJHUwPL9Q7ySbMUaw8DpwvALdbKHH6_Uze84d0GDTc",
+    url:"https://lwpclhfetzfttiszfqfc.supabase.co",
+  );
   // Exécute l'application Flutter avec MyApp comme widget racine
   runApp(const MyApp());
 }
