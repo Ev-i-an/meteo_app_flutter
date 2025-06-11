@@ -8,7 +8,7 @@ import '../models/weather_models.dart'; // Importation du modèle de données m�
 
 class WeatherService {
   // URL de base pour l'API OpenWeatherMap
-  static const String baseUrl = 'http://api.openweathermap.org/data/3.0/weather';
+  static const String baseUrl = 'URL_KEY';
   final String apiKey; // Clé API pour accéder au service de météo
 
   // Constructeur de la classe WeatherService
