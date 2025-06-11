@@ -8,7 +8,7 @@ import '../models/weather_models.dart'; // Importation du modèle de données m�
 
 class WeatherService {
   // URL de base pour l'API OpenWeatherMap
-  static const String baseUrl = 'http://api.openweathermap.org/data/2.5/weather';
+  static const String baseUrl = 'http://api.openweathermap.org/data/3.0/weather';
   final String apiKey; // Clé API pour accéder au service de météo
 
   // Constructeur de la classe WeatherService
@@ -25,7 +25,7 @@ class WeatherService {
       return Weather.fromJson(jsonDecode(response.body));
     } else {
       // Lance une exception si la requête échoue
-      throw Exception('Failed to load weather data');
+      throw Exception('Échec du chargement des données météorologiques');
     }
   }
 

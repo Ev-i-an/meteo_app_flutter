@@ -23,7 +23,7 @@ class _RegisterPageState extends State<RegisterPage> {
     if (password != confirmPassword) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Passwords don't match")),
+          const SnackBar(content: Text("Le mot de passe ne correspond pas")),
         );
       }
       return;
@@ -37,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Error: $e")),
+          SnackBar(content: Text("Erreur: $e")),
         );
       }
     }
@@ -47,7 +47,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Sign Up"),
+        title: const Text("S'inscrire"),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 50),
@@ -69,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
           const SizedBox(height: 12),
           ElevatedButton(
             onPressed: signUp,
-            child: const Text("Sign Up"),
+            child: const Text("S'inscrire"),
           ),
         ],
       ),
