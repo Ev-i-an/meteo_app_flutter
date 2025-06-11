@@ -7,8 +7,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 void main() async {
 
   await Supabase.initialize(
-    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx3cGNsaGZldHpmdHRpc3pmcWZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1OTU1NzYsImV4cCI6MjA2NTE3MTU3Nn0.DxJHUwPL9Q7ySbMUaw8DpwvALdbKHH6_Uze84d0GDTc",
-    url:"https://lwpclhfetzfttiszfqfc.supabase.co",
+    anonKey: "API_KEY",
   );
   // Exécute l'application Flutter avec MyApp comme widget racine
   runApp(const MyApp());
